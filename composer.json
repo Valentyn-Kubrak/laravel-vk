@@ -1,0 +1,26 @@
+{
+    "name": "alkali/laravel-vk",
+    "type": "library",
+    "description": "VK Api wrapper for laravel",
+    "keywords": ["VK", "VK api", "laravel", "php"],
+    "homepage": "https://github.com/alkali/laravel-vk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alkali",
+            "email": "webprogrammist@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",     
+        "vladkens/vk": "dev-master"
+    },
+    "require-all": true,
+    "autoload": {    
+        "psr-0": {
+            "Alkali\\VK": "src/"
+        }
+    },    
+    "minimum-stability": "dev"    
+}
