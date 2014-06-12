@@ -58,22 +58,14 @@ class VK
     const AUTHORIZE_URL = 'https://oauth.vk.com/authorize';
     const ACCESS_TOKEN_URL = 'https://oauth.vk.com/access_token';
 
-    /**
-     * Constructor.
-     * @param   string $app_id
-     * @param   string $api_secret
-     * @param   string $access_token
-     * @throws  VKException
-     * @return  void
-     */
-    public function __construct($access_token = null)
+    public function init($token)
     {
         if (Config::get('vk') != null)
         {
             $this->_client_id = Config::get("vk.client_id");
             $this->_client_secret = Config::get("vk.client_secret");
         }
-        $this->access_token = $access_token;
+        $this->access_token = $token;
         $this->ch = curl_init();
 
         if (!is_null($this->access_token))
